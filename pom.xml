@@ -18,119 +18,117 @@
   
  
   <profiles>
-  	<profile>
-  	  <id>prof1</id>
-  	  <build>
+    <profile>
+      <id>prof1</id>
+        <build>
         <plugins>
-  	      <plugin>
-  	        <groupId>org.apache.maven.plugins</groupId>
-  	        <artifactId>maven-dependency-plugin</artifactId>
-  	        <version>2.10</version>
-  	        <executions>
-  	          <execution>
-  	            <phase>process-resources</phase>
-  	            <goals>
-  	              <goal>copy-dependencies</goal>
-  	            </goals>
-  	            <configuration>
-  	              <outputDirectory>${project.basedir}/prof1</outputDirectory>
-  	            </configuration>
-  	          </execution>
-  	        </executions>
-  	      </plugin>
-  	    </plugins>
-  	  </build>
-  	</profile>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.10</version>
+            <executions>
+              <execution>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>copy-dependencies</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>${project.basedir}/prof1</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   	
-  	<profile>
-  	  <id>prof2</id>
-  	  <activation> 
-	    <property> 
+    <profile>
+      <id>prof2</id>
+      <activation> 
+        <property> 
           <name>pr</name> 
           <value>2</value> 
         </property> 
-	  </activation> 
+	    </activation> 
   	  <build>
         <plugins>
-  	      <plugin>
+          <plugin>
   	        <groupId>org.apache.maven.plugins</groupId>
-  	        <artifactId>maven-dependency-plugin</artifactId>
-  	        <version>2.10</version>
-  	        <executions>
-  	          <execution>
-  	            <phase>process-resources</phase>
-  	            <goals>
-  	              <goal>copy-dependencies</goal>
-  	            </goals>
-  	            <configuration>
-  	              <outputDirectory>${project.basedir}/prof2</outputDirectory>
-  	            </configuration>
-  	          </execution>
-  	        </executions>
-  	      </plugin>
-  	    </plugins>
-  	  </build>
-  	</profile>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.10</version>
+            <executions>
+              <execution>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>copy-dependencies</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>${project.basedir}/prof2</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   	
-  	<profile>
-  	  <id>prof3</id>
-  	  <activation> 
-	    <jdk>1.7</jdk> 
-	  </activation> 
-  	  <build>
+    <profile>
+      <id>prof3</id>
+      <activation> 
+	      <jdk>1.7</jdk> 
+      </activation> 
+      <build>
         <plugins>
-  	      <plugin>
-  	        <groupId>org.apache.maven.plugins</groupId>
-  	        <artifactId>maven-dependency-plugin</artifactId>
-  	        <version>2.10</version>
-  	        <executions>
-  	          <execution>
-  	            <phase>process-resources</phase>
-  	            <goals>
-  	              <goal>copy-dependencies</goal>
-  	            </goals>
-  	            <configuration>
-  	              <outputDirectory>${project.basedir}/jdk1.7</outputDirectory>
-  	            </configuration>
-  	          </execution>
-  	        </executions>
-  	      </plugin>
-  	    </plugins>
-  	  </build>
-  	</profile>
+          <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.10</version>
+            <executions>
+              <execution>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>copy-dependencies</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>${project.basedir}/jdk1.7</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   	
-  	
-  	<profile>
-  	  <id>prof4</id>
-  	  <activation> 
+    <profile>
+      <id>prof4</id>
+      <activation> 
         <activeByDefault>true</activeByDefault> 
       </activation> 
-  	  <build>
+      <build>
         <plugins>
-  	      <plugin>
-  	        <groupId>org.apache.maven.plugins</groupId>
-  	        <artifactId>maven-dependency-plugin</artifactId>
-  	        <version>2.10</version>
-  	        <executions>
-  	          <execution>
-  	            <phase>process-resources</phase>
-  	            <goals>
-  	              <goal>copy-dependencies</goal>
-  	            </goals>
-  	            <configuration>
-  	              <outputDirectory>${project.basedir}/default</outputDirectory>
-  	            </configuration>
-  	          </execution>
-  	        </executions>
-  	      </plugin>
-  	    </plugins>
-  	  </build>
-  	</profile>
-  	
-  	
-  	<profile>
-  	  <id>prof5</id>
-  	  <activation>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.10</version>
+            <executions>
+              <execution>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>copy-dependencies</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>${project.basedir}/default</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+     </build>
+    </profile>
+
+    <profile>
+      <id>prof5</id>
+      <activation>
         <os>
           <name>Windows 7</name>
           <family>Windows</family>
@@ -138,29 +136,27 @@
           <version>5.1.2600</version>
         </os>
       </activation>
- 	  <build>
+ 	    <build>
         <plugins>
-  	      <plugin>
-  	        <groupId>org.apache.maven.plugins</groupId>
-  	        <artifactId>maven-dependency-plugin</artifactId>
-  	        <version>2.10</version>
-  	        <executions>
-  	          <execution>
-  	            <phase>process-resources</phase>
-  	            <goals>
-  	              <goal>copy-dependencies</goal>
-  	            </goals>
-  	            <configuration>
-  	              <outputDirectory>${project.basedir}/windows</outputDirectory>
-  	            </configuration>
-  	          </execution>
-  	        </executions>
-  	      </plugin>
-  	    </plugins>
-  	  </build>
-  	</profile>
-
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.10</version>
+            <executions>
+              <execution>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>copy-dependencies</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>${project.basedir}/windows</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
-  
-  
+
 </project>
